@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;  /* Optional: Make completed tasks appear lighter */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #task-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #task-input {
+            width: 300px;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #task-form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #task-form button:hover {
+            background-color: #45a049;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding: 0;
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-item button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .task-item button:hover {
+            background-color: #e53935;
+        }
+
+        .task-item span {
+            flex-grow: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            #task-input {
+                width: 200px;
+            }
+
+            #task-form button {
+                width: 120px;
+            }
+        }
+    </style>
+
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <h1>Task Manager</h1>
+
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="New task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="task-list"></ul>
+</body>
+</html>
